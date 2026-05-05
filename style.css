@@ -75,10 +75,14 @@ nav ul li:first-child {
 
 nav a{
     color:var(--white);
+    display: inline-block;
     text-decoration:none;
     margin-left:20px;
     font-weight:bold;
-    transition: color var(--transition-speed) ease;
+    border: 1px solid transparent
+    border radius: 12px
+    transition: color var(--transition-speed) ease,background 0.2s ease, border 0.2s ease;
+    
 }
 
 nav a:hover, nav a:focus {
