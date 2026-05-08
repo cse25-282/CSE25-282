@@ -307,9 +307,23 @@ input[type="submit"]:focus, button:focus {
     }
 }
 /*styling gallery*/
+.gallery-content{
+    display: grid;
+    grid-template-colomn: repeat(auto-fit, minmax(250px,1fr))
+}
 
-
-
+.card{
+    position: relative;
+    overflow: hidden;
+    boader-radius: 20px;
+    
+}
+.card img{
+    width: 100%;
+    height: 250%;
+    display: block;
+}
+    
 
 
 
