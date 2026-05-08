@@ -74,7 +74,7 @@ nav ul li:first-child {
 }
 
 nav a{
-    color:var(--white);
+    color: red;
     display: inline-block;
     text-decoration:none;
     margin-left:20px;
@@ -87,7 +87,8 @@ nav a{
 
 nav a:hover, nav a:focus {
     text-decoration:underline;
-    outline: none;
+    color:red;
+
 }
 
 /* Hamburger Menu Button */
@@ -299,3 +300,17 @@ input[type="submit"]:focus, button:focus {
         max-width: 100%;
     }
 }
+/*styling gallery*/
+
+.gallery-grid{
+    background-colour:blue;
+    
+    
+}
+
+
+
+
+
+
+
