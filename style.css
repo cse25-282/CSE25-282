@@ -307,24 +307,26 @@ input[type="submit"]:focus, button:focus {
     }
 }
 /*styling gallery*/
-.gallery-content{
+.gallery-content {
     display: grid;
-    grid-template-colomn: repeat(auto-fit, minmax(250px,1fr))
-    gab: 2 rem;
-}
-
-.card{
-    position: relative;
-    overflow: hidden;
-    boader-radius: 20px;
+    grid-template-colomns: repeat(auto-fit,minmax(350px, auto));
+    gap: 2.3rem;
+    margin-top: 4.1;
+    align-items: center;
     
 }
-.card img{
-    width: 60%;
-    height: 100%;
-    display: block;
+.grid {
+    background:black;
+    border-radius:27px;
+    padding: 20px;
 }
-    
+.grid img {
+    width: auto;
+    height: auto;
+    border-radius: 27px;
+    margin-bottom: 1.4rem;
+    align-content: center;
+}
 
 
 
