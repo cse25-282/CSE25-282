@@ -202,13 +202,13 @@ nav a:focus-visible {
 /*Main content area*/
 main{
     padding:40px;
-    background-color: black;
+    background-color: none;
     margin:20px;
     border-radius:15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
 }
-main a{
-    color:white;
+
 }
 
 /*Footer*/
