@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now — Shoova</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="booking-page">
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <h1 class="logo">Shoova</h1>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="full-menu" id="full-menu">
+                <button class="close-menu" id="close-menu">&times;</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <div class="menu-overlay" id="menu-overlay"></div>
+        </nav>
+    </header>
+
+    <!-- ── HERO ───────────────────────────────────────── -->
+    <section class="booking-hero">
+        <div class="booking-hero-bg"></div>
+        <div class="booking-hero-content">
+            <p class="booking-eyebrow"> Schedule Your Clean</p>
+            <h1>Book Your<br><span class="booking-accent">Wash.</span></h1>
+            <p class="booking-hero-sub">Fast. Simple. Fresh kicks guaranteed.</p>
+        </div>
+        <div class="booking-steps-strip">
+            <div class="bstep"><span class="bstep-num">01</span><span class="bstep-label">Choose Service</span></div>
+            <div class="bstep-arrow">→</div>
+            <div class="bstep"><span class="bstep-num">02</span><span class="bstep-label">Pick Date & Time</span></div>
+            <div class="bstep-arrow">→</div>
+            <div class="bstep"><span class="bstep-num">03</span><span class="bstep-label">Your Details</span></div>
+            <div class="bstep-arrow">→</div>
+            <div class="bstep"><span class="bstep-num">04</span><span class="bstep-label">Confirm</span></div>
+        </div>
+    </section>
+
+    <!-- ── MAIN BOOKING AREA ──────────────────────────── -->
+    <section class="booking-main">
+
+        <!-- LEFT: FORM -->
+        <div class="booking-form-wrap">
+
+            <form id="booking-form" class="booking-form" novalidate>
+
+                <!-- STEP 1: SERVICE -->
+                <div class="form-step" id="step-1">
+                    <div class="step-header">
+                        <span class="step-badge">01</span>
+                        <div>
+                            <h2>Choose Your Service</h2>
+                            <p>Select the clean that suits your kicks</p>
+                        </div>
+                    </div>
+
+                    <div class="service-options">
+
+                        <label class="service-option">
+                            <input type="radio" name="service" value="basic" required>
+                            <div class="service-option-card">
+                                <div class="service-option-top">
+                                    <span class="service-option-icon"></span>
+                                    <div>
+                                        <strong>Basic Wash</strong>
+                                        <span class="service-option-price">P50</span>
+                                    </div>
+                                </div>
+                                <p>Surface clean, lace wash & deodorize. Perfect for weekly maintenance.</p>
+                                <ul class="service-includes">
+                                    <li>✓ Upper cleaning</li>
+                                    <li>✓ Lace wash</li>
+                                    <li>✓ Deodorize</li>
+                                    <li>✓ 24hr turnaround</li>
+                                </ul>
+                            </div>
+                        </label>
+
+                        <label class="service-option">
+                            <input type="radio" name="service" value="deep">
+                            <div class="service-option-card popular-card">
+                                <div class="popular-badge">Most Popular</div>
+                                <div class="service-option-top">
+                                    <span class="service-option-icon">🫧</span>
+                                    <div>
+                                        <strong>Deep Clean</strong>
+                                        <span class="service-option-price">P100</span>
+                                    </div>
+                                </div>
+                                <p>Full scrub, midsole cleaning, stain removal & UV whitening treatment.</p>
+                                <ul class="service-includes">
+                                    <li>✓ Full deep scrub</li>
+                                    <li>✓ Midsole cleaning</li>
+                                    <li>✓ Stain removal</li>
+                                    <li>✓ UV whitening</li>
+                                </ul>
+                            </div>
+                        </label>
+
+                        <label class="service-option">
+                            <input type="radio" name="service" value="restoration">
+                            <div class="service-option-card">
+                                <div class="service-option-top">
+                                    <span class="service-option-icon"></span>
+                                    <div>
+                                        <strong>Restoration</strong>
+                                        <span class="service-option-price">P150</span>
+                                    </div>
+                                </div>
+                                <p>Sole re-glueing, crease removal, colour touch-up & full restoration.</p>
+                                <ul class="service-includes">
+                                    <li>✓ Sole re-glueing</li>
+                                    <li>✓ Crease removal</li>
+                                    <li>✓ Colour touch-up</li>
+                                    <li>✓ Full restoration</li>
+                                </ul>
+                            </div>
+                        </label>
+
+                    </div>
+                </div>
+
+
+
+                <!-- STEP 2: DATE & TIME -->
+                <div class="form-step" id="step-2">
+                    <div class="step-header">
+                        <span class="step-badge">02</span>
+                        <div>
+                            <h2>Pick a Date & Time</h2>
+                            <p>Choose when works best for you</p>
+                        </div>
+                    </div>
+
+                    <div class="date-time-row">
+                        <div class="form-group">
+                            <label for="booking-date">Preferred Date</label>
+                            <input type="date" id="booking-date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-time">Preferred Time</label>
+                            <select id="booking-time" name="time" required>
+                                <option value="" disabled selected>Select a slot</option>
+                                <option value="08:00">08:00 AM</option>
+                                <option value="09:00">09:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">01:00 PM</option>
+                                <option value="14:00">02:00 PM</option>
+                                <option value="15:00">03:00 PM</option>
+                                <option value="16:00">04:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Collection Method</label>
+                        <div class="collection-options">
+                            <label class="collection-option">
+                                <input type="radio" name="collection" value="dropoff" checked>
+                                <div class="collection-card">
+                                    <span class="col-icon"></span>
+                                    <strong>I'll Drop Off</strong>
+                                    <span>Bring your shoes to us</span>
+                                </div>
+                            </label>
+                            <label class="collection-option">
+                                <input type="radio" name="collection" value="collect">
+                                <div class="collection-card">
+                                    <span class="col-icon"></span>
+                                    <strong>Collect from Me</strong>
+                                    <span>We come to you (+P20)</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 3: YOUR DETAILS -->
+                <div class="form-step" id="step-3">
+                    <div class="step-header">
+                        <span class="step-badge">03</span>
+                        <div>
+                            <h2>Your Details</h2>
+                            <p>So we know who we're cleaning for</p>
+                        </div>
+                    </div>
+
+                    <div class="name-row">
+                        <div class="form-group">
+                            <label for="b-fname">First Name</label>
+                            <input type="text" id="b-fname" name="fname" placeholder="Tefho" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="b-lname">Last Name</label>
+                            <input type="text" id="b-lname" name="lname" placeholder="Modise" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="b-phone">Phone / WhatsApp Number</label>
+                        <input type="tel" id="b-phone" name="phone" placeholder="+267 7X XXX XXX" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="b-email">Email Address</label>
+                        <input type="email" id="b-email" name="email" placeholder="you@email.com">
+                    </div>
+
+                    <div class="form-group" id="address-group" style="display:none;">
+                        <label for="b-address">Collection Address</label>
+                        <input type="text" id="b-address" name="address" placeholder="Your street, area, Gaborone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="b-shoes">Shoe Brand & Model</label>
+                        <input type="text" id="b-shoes" name="shoes" placeholder="e.g. Nike Air Force 1, Jordan 1 Retro">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="b-notes">Special Instructions</label>
+                        <textarea id="b-notes" name="notes" rows="3" placeholder="Any specific stains, damage, or instructions we should know about..."></textarea>
+                    </div>
+                </div>
+
+                <!-- SUBMIT -->
+                <button type="submit" class="booking-submit-btn">
+                    <span>Confirm Booking</span>
+                    <span class="submit-arrow">→</span>
+                </button>
+
+                <!-- SUCCESS -->
+                <div class="booking-success" id="booking-success">
+                    <div class="success-icon">✅</div>
+                    <h3>Booking Received!</h3>
+                    <p>We'll confirm your booking via WhatsApp or phone within 1 hour. Get ready for fresh kicks! 👟</p>
+                    <a href="index.html" class="btn" style="margin-top:20px;">Back to Home</a>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- RIGHT: SUMMARY SIDEBAR -->
+        <div class="booking-sidebar">
+
+            <!-- ORDER SUMMARY -->
+            <div class="summary-card">
+                <h3 class="summary-title">Booking Summary</h3>
+                <div class="summary-row">
+                    <span class="summary-label">Service</span>
+                    <span class="summary-value" id="sum-service">Not selected</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Date</span>
+                    <span class="summary-value" id="sum-date">—</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Time</span>
+                    <span class="summary-value" id="sum-time">—</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Collection</span>
+                    <span class="summary-value" id="sum-collection">Drop Off</span>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-row summary-total">
+                    <span class="summary-label">Estimated Total</span>
+                    <span class="summary-value" id="sum-total">P0</span>
+                </div>
+            </div>
+
+            <!-- TRUST BADGES -->
+<div class="trust-badge-card">
+
+    <div class="trust-badge-item">
+        <span class="tb-icon"><i class="fas fa-bolt"></i></span>
+        <div>
+            <strong>Fast Turnaround</strong>
+            <span>Most cleans done in 24hrs</span>
+        </div>
+    </div>
+
+    <div class="trust-badge-item">
+        <span class="tb-icon"><i class="fas fa-shield-alt"></i></span>
+        <div>
+            <strong>Safe & Secure</strong>
+            <span>Professional-grade products only</span>
+        </div>
+    </div>
+
+    <div class="trust-badge-item">
+        <span class="tb-icon"><i class="fas fa-star"></i></span>
+        <div>
+            <strong>4.9 Star Rated</strong>
+            <span>100+ happy customers</span>
+        </div>
+    </div>
+
+    <div class="trust-badge-item">
+        <span class="tb-icon"><i class="fab fa-whatsapp"></i></span>
+        <div>
+            <strong>WhatsApp Updates</strong>
+            <span>We keep you in the loop</span>
+        </div>
+    </div>
+
+</div>
+
+            <div class="help-card">
+    <p class="help-title">Need help booking?</p>
+
+    <a href="https://wa.me/26771234567" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+    </a>
+
+    <a href="tel:+26771234567" class="call-btn">
+        <i class="fas fa-phone"></i> Call Us
+    </a>
+</div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Shoova. All rights reserved.</p>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // ── MENU ──────────────────────────────────────────────
+        const toggle   = document.getElementById('menu-toggle');
+        const fullMenu = document.getElementById('full-menu');
+        const overlay  = document.getElementById('menu-overlay');
+        const closeBtn = document.getElementById('close-menu');
+        toggle.addEventListener('click',   () => { fullMenu.classList.add('open');    overlay.classList.add('open');    });
+        closeBtn.addEventListener('click', () => { fullMenu.classList.remove('open'); overlay.classList.remove('open'); });
+        overlay.addEventListener('click',  () => { fullMenu.classList.remove('open'); overlay.classList.remove('open'); });
+
+        // ── SET MIN DATE (today) ───────────────────────────────
+        const dateInput = document.getElementById('booking-date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+
+        // ── BOOKING SUMMARY LIVE UPDATE ────────────────────────
+        const prices = { basic: 50, deep: 100, restoration: 150 };
+        const serviceNames = { basic: 'Basic Wash', deep: 'Deep Clean', restoration: 'Restoration' };
+        let selectedPrice = 0;
+        let collectionFee = 0;
+
+        function updateSummary() {
+            document.getElementById('sum-total').textContent = `P${selectedPrice + collectionFee}`;
+        }
+
+        // Service selection
+        document.querySelectorAll('input[name="service"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const val = radio.value;
+                document.getElementById('sum-service').textContent = serviceNames[val];
+                selectedPrice = prices[val];
+                updateSummary();
+
+                // Highlight selected card
+                document.querySelectorAll('.service-option-card').forEach(c => c.classList.remove('selected'));
+                radio.closest('.service-option').querySelector('.service-option-card').classList.add('selected');
+            });
+        });
+
+        // Date
+        dateInput.addEventListener('change', () => {
+            const d = new Date(dateInput.value);
+            const formatted = d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+            document.getElementById('sum-date').textContent = formatted;
+        });
+
+        // Time
+        document.getElementById('booking-time').addEventListener('change', function () {
+            document.getElementById('sum-time').textContent = this.options[this.selectedIndex].text;
+        });
+
+        // Collection method
+        document.querySelectorAll('input[name="collection"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const val = radio.value;
+                collectionFee = val === 'collect' ? 20 : 0;
+                document.getElementById('sum-collection').textContent = val === 'collect' ? 'We Collect (+P20)' : 'Drop Off';
+                updateSummary();
+
+                // Show/hide address field
+                document.getElementById('address-group').style.display = val === 'collect' ? 'flex' : 'none';
+
+                // Highlight selected
+                document.querySelectorAll('.collection-card').forEach(c => c.classList.remove('selected'));
+                radio.closest('.collection-option').querySelector('.collection-card').classList.add('selected');
+            });
+        });
+
+        // ── FORM SUBMIT ────────────────────────────────────────
+        document.getElementById('booking-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Basic validation
+            const service = document.querySelector('input[name="service"]:checked');
+            const date    = document.getElementById('booking-date').value;
+            const time    = document.getElementById('booking-time').value;
+            const fname   = document.getElementById('b-fname').value.trim();
+            const phone   = document.getElementById('b-phone').value.trim();
+
+            if (!service || !date || !time || !fname || !phone) {
+                alert('Please fill in all required fields before confirming.');
+                return;
+            }
+
+            // Show success
+            this.style.display = 'none';
+            document.getElementById('booking-success').classList.add('show');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ── SCROLL REVEAL ──────────────────────────────────────
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.form-step, .booking-sidebar > *').forEach(el => obs.observe(el));
+
+    });
+    </script>
+
+</body>
+</html>

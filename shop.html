@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop — Shoova</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="shop-page">
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <h1 class="logo">Shoova</h1>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+
+            <!-- CART ICON -->
+            <div class="cart-icon-wrap" id="cart-toggle">
+                <i class="fas fa-bag-shopping"></i>
+                <span class="cart-badge" id="cart-badge">0</span>
+            </div>
+
+            <div class="full-menu" id="full-menu">
+                <button class="close-menu" id="close-menu">&times;</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <div class="menu-overlay" id="menu-overlay"></div>
+        </nav>
+    </header>
+
+    <!-- CART DRAWER -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close-btn" id="cart-close"><i class="fas fa-xmark"></i></button>
+        </div>
+        <div class="cart-items-wrap" id="cart-items-wrap">
+            <div class="cart-empty" id="cart-empty">
+                <i class="fas fa-bag-shopping"></i>
+                <p>Your cart is empty</p>
+                <span>Add some products to get started</span>
+            </div>
+            <div id="cart-items-list"></div>
+        </div>
+        <div class="cart-footer" id="cart-footer" style="display:none;">
+            <div class="cart-total-row">
+                <span>Total</span>
+                <strong id="cart-total">P0</strong>
+            </div>
+            <button class="cart-checkout-btn" id="checkout-btn">
+                Checkout via WhatsApp <i class="fab fa-whatsapp"></i>
+            </button>
+            <button class="cart-clear-btn" id="cart-clear">Clear Cart</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- ── HERO ───────────────────────────────────────── -->
+    <section class="shop-hero">
+        <div class="shop-hero-bg"></div>
+        <div class="shop-hero-content">
+            <p class="shop-eyebrow">✦ Shoova Shop</p>
+            <h1>Clean Your<br>Own Kicks.</h1>
+            <p class="shop-hero-sub">Professional-grade cleaning kits, solutions and accessories — delivered to your door.</p>
+            <a href="#shop-products" class="shop-hero-btn">Browse Products <i class="fas fa-arrow-down"></i></a>
+        </div>
+        <div class="shop-hero-stats">
+            <div class="shop-hstat">
+                <span class="shop-hstat-num">8</span>
+                <span class="shop-hstat-label">Products</span>
+            </div>
+            <div class="shop-hstat-div"></div>
+            <div class="shop-hstat">
+                <span class="shop-hstat-num">P35</span>
+                <span class="shop-hstat-label">Starting From</span>
+            </div>
+            <div class="shop-hstat-div"></div>
+            <div class="shop-hstat">
+                <span class="shop-hstat-num">🚗</span>
+                <span class="shop-hstat-label">Free Delivery P200+</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FILTER BAR ─────────────────────────────────── -->
+    <div class="shop-filter-bar" id="shop-products">
+        <div class="shop-filter-inner">
+            <button class="shop-filter-btn active" data-cat="all">All Products</button>
+            <button class="shop-filter-btn" data-cat="kit">Cleaning Kits</button>
+            <button class="shop-filter-btn" data-cat="solution">Solutions</button>
+            <button class="shop-filter-btn" data-cat="tool">Tools</button>
+            <button class="shop-filter-btn" data-cat="merch">Merch</button>
+        </div>
+        <div class="shop-sort-wrap">
+            <label>Sort by</label>
+            <select id="shop-sort">
+                <option value="default">Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- ── PRODUCTS GRID ──────────────────────────────── -->
+    <section class="shop-products-section">
+        <div class="shop-grid" id="shop-grid">
+
+            <!-- PRODUCT 1 -->
+            <div class="shop-card" data-cat="kit" data-price="120" data-name="Starter Cleaning Kit">
+                <div class="shop-card-img">
+                    <img src="Air.jpg" alt="Starter Kit">
+                    <span class="shop-badge bestseller-badge">Best Seller</span>
+                    <button class="shop-quick-add" data-id="1" data-name="Starter Cleaning Kit" data-price="120">
+                        <i class="fas fa-plus"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="shop-card-body">
+                    <div class="shop-card-top">
+                        <div>
+                            <span class="shop-cat-tag">Cleaning Kit</span>
+                            <h3>Starter Cleaning Kit</h3>
+                        </div>
+                        <span class="shop-price">P120</span>
+                    </div>
+                    <p>Everything you need to keep your sneakers fresh. Includes brush set, cleaning solution and microfibre cloth.</p>
+                    <div class="shop-card-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9 (32)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 2 -->
+            <div class="shop-card featured-product" data-cat="kit" data-price="220" data-name="Pro Deep Clean Kit">
+                <div class="shop-badge pro-badge">Pro Kit</div>
+                <div class="shop-card-img">
+                    <img src="Air2.avif" alt="Pro Kit">
+                    <button class="shop-quick-add" data-id="2" data-name="Pro Deep Clean Kit" data-price="220">
+                        <i class="fas fa-plus"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="shop-card-body">
+                    <div class="shop-card-top">
+                        <div>
+                            <span class="shop-cat-tag">Cleaning Kit</span>
+                            <h3>Pro Deep Clean Kit</h3>
+                        </div>
+                        <span class="shop-price">P220</span>
+                    </div>
+                    <p>Full professional kit used by Shoova. Premium brushes, deep clean solution, suede kit & UV whitening pen.</p>
+                    <div class="shop-card-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5.0 (18)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 3 -->
+            <div class="shop-card" data-cat="solution" data-price="55" data-name="All-Purpose Cleaning Solution">
+                <div class="shop-card-img">
+                    <img src="Air3.webp" alt="Cleaning Solution">
+                    <button class="shop-quick-add" data-id="3" data-name="All-Purpose Cleaning Solution" data-price="55">
+                        <i class="fas fa-plus"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="shop-card-body">
+                    <div class="shop-card-top">
+                        <div>
+                            <span class="shop-cat-tag">Solution</span>
+                            <h3>All-Purpose Cleaning Solution</h3>
+                        </div>
+                        <span class="shop-price">P55</span>
+                    </div>
+                    <p>Shoova's signature cleaning formula. Safe on all materials — leather, mesh, canvas, suede. 200ml bottle.</p>
+                    <div class="shop-card-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.8 (45)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 4 -->
+            <div class="shop-card" data-cat="tool" data-price="35" data-name="Premium Brush Set">
+                <div class="shop-card-img">
+                    <img src="Air4.jpg" alt="Brush Set">
+                    <button class="shop-quick-add" data-id="4" data-name="Premium Brush Set" data-price="35">
+                        <i class="fas fa-plus"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="shop-card-body">
+                    <div class="shop-card-top">
+                        <div>
+                            <span class="shop-cat-tag">Tool</span>
+                            <h3>Premium Brush Set</h3>
+                        </div>
+                        <span class="shop-price">P35</span>
+                    </div>
+                    <p>3-brush set: soft bristle for uppers, medium for midsoles, stiff for outsoles. Professional grade.</p>
+                    <div class="shop-card-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-stroke"></i>
+                        <span>4.7 (28)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 5 -->
+            <div class="shop-card" data-cat="solution" data-price="45" data-name="Suede Protect Spray">
+                <div class="shop-card-img">
+                    <img src="Samba.avif" alt="Suede Spray">
+                    <span class="shop-badge new-badge">New</span>
+                    <button class="shop-quick-add" data-id="5" data-name="Suede Protect Spray" data-price="45">
+                        <i class="fas fa-plus"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="shop-card-body">
+                    <div class="shop-card-top">
+                        <div>
+                            <span class="shop-cat-tag">Solution</span>
+                            <h3>Suede Protect Spray</h3>
+                        </div>
+                        <span class="shop-price">P45</span>
+                    </div>
+                    <p>Water and stain repellent specifically formulated for suede and nubuck. Keeps nap intact. 150ml.</p>
+                    <div class="shop-card-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9 (12)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 6 -->
+            <div class="shop-card" data-cat="tool" data-price="40" data-name="Microfibre Cloth Pack (5x)">
+                <div class="shop-card-img">
+                    <img src="Force.avif" alt="Microfibre Pack">
+                    <button class="shop-quick-add" data-id="6" data-name="Microfibre Cloth Pack (5x)" data-price="40">
+                        <i class="fas fa-plus"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="shop-card-body">
+                    <div class="shop-card-top">
+                        <div>
+                            <span class="shop-cat-tag">Tool</span>
+                            <h3>Microfibre Cloth Pack (5x)</h3>
+                        </div>
+                        <span class="shop-price">P40</span>
+                    </div>
+                    <p>Premium ultra-soft microfibre cloths. Scratch-free buffing and drying. Pack of 5 reusable cloths.</p>
+                    <div class="shop-card-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.8 (21)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 7 -->
+            <div class="shop-card" data-cat="merch" data-price="180" data-name="Shoova Tee — Black">
+                <div class="shop-card-img">
+                    <img src="campus.avif" alt="Shoova Tee">
+                    <span class="shop-badge new-badge">New</span>
+                    <button class="shop-quick-add" data-id="7" data-name="Shoova Tee — Black" data-price="180">
+                        <i class="fas fa-plus"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="shop-card-body">
+                    <div class="shop-card-top">
+                        <div>
+                            <span class="shop-cat-tag">Merch</span>
+                            <h3>Shoova Tee — Black</h3>
+                        </div>
+                        <span class="shop-price">P180</span>
+                    </div>
+                    <p>Premium heavyweight cotton tee with the Shoova logo. S / M / L / XL. Unisex fit. Limited stock.</p>
+                    <div class="shop-card-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5.0 (8)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 8 -->
+            <div class="shop-card" data-cat="kit" data-price="85" data-name="Travel Cleaning Kit">
+                <div class="shop-card-img">
+                    <img src="Pega.avif" alt="Travel Kit">
+                    <button class="shop-quick-add" data-id="8" data-name="Travel Cleaning Kit" data-price="85">
+                        <i class="fas fa-plus"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="shop-card-body">
+                    <div class="shop-card-top">
+                        <div>
+                            <span class="shop-cat-tag">Cleaning Kit</span>
+                            <h3>Travel Cleaning Kit</h3>
+                        </div>
+                        <span class="shop-price">P85</span>
+                    </div>
+                    <p>Compact kit for on-the-go. Mini brush, 60ml solution, 2 cloths. Fits in any bag or backpack.</p>
+                    <div class="shop-card-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-stroke"></i>
+                        <span>4.6 (14)</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── FREE DELIVERY BANNER ───────────────────────── -->
+    <section class="shop-delivery-banner">
+        <div class="delivery-item"><i class="fas fa-truck"></i><span>Free delivery on orders over <strong>P200</strong></span></div>
+        <div class="delivery-divider"></div>
+        <div class="delivery-item"><i class="fab fa-whatsapp"></i><span>Order via WhatsApp for fastest service</span></div>
+        <div class="delivery-divider"></div>
+        <div class="delivery-item"><i class="fas fa-rotate-left"></i><span>7-day returns on all products</span></div>
+    </section>
+
+    <!-- ── CTA ────────────────────────────────────────── -->
+    <section class="shop-cta">
+        <h2>Let Us Do It For You.</h2>
+        <p>Too busy to clean your own kicks? We've got you. Book a professional wash from P50.</p>
+        <a href="booking.html" class="btn">Book a Wash →</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-ticker">
+            <div class="ticker-track">
+                <span>Fresh Kicks</span><span class="ticker-dot">✦</span>
+                <span>Shop Shoova</span><span class="ticker-dot">✦</span>
+                <span>Cleaning Kits</span><span class="ticker-dot">✦</span>
+                <span>Free Delivery P200+</span><span class="ticker-dot">✦</span>
+                <span>Pro Grade Products</span><span class="ticker-dot">✦</span>
+                <span>Gaborone's Best</span><span class="ticker-dot">✦</span>
+                <span>Fresh Kicks</span><span class="ticker-dot">✦</span>
+                <span>Shop Shoova</span><span class="ticker-dot">✦</span>
+                <span>Cleaning Kits</span><span class="ticker-dot">✦</span>
+                <span>Free Delivery P200+</span><span class="ticker-dot">✦</span>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2025 Shoova. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/26771234567" class="footer-social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <p class="footer-made">Made with ♥ in Gaborone</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // ── MENU ──────────────────────────────────────────────
+        const toggle   = document.getElementById('menu-toggle');
+        const fullMenu = document.getElementById('full-menu');
+        const overlay  = document.getElementById('menu-overlay');
+        const closeBtn = document.getElementById('close-menu');
+        toggle.addEventListener('click',   () => { fullMenu.classList.add('open');    overlay.classList.add('open');    });
+        closeBtn.addEventListener('click', () => { fullMenu.classList.remove('open'); overlay.classList.remove('open'); });
+        overlay.addEventListener('click',  () => { fullMenu.classList.remove('open'); overlay.classList.remove('open'); });
+
+        // ── CART ───────────────────────────────────────────────
+        let cart = [];
+
+        function openCart()  { document.getElementById('cart-drawer').classList.add('open'); document.getElementById('cart-overlay').classList.add('open'); }
+        function closeCart() { document.getElementById('cart-drawer').classList.remove('open'); document.getElementById('cart-overlay').classList.remove('open'); }
+
+        document.getElementById('cart-toggle').addEventListener('click', openCart);
+        document.getElementById('cart-close').addEventListener('click', closeCart);
+        document.getElementById('cart-overlay').addEventListener('click', closeCart);
+
+        function renderCart() {
+            const list   = document.getElementById('cart-items-list');
+            const empty  = document.getElementById('cart-empty');
+            const footer = document.getElementById('cart-footer');
+            const badge  = document.getElementById('cart-badge');
+
+            if (cart.length === 0) {
+                empty.style.display  = 'flex';
+                list.innerHTML       = '';
+                footer.style.display = 'none';
+                badge.textContent    = '0';
+                badge.style.display  = 'none';
+                return;
+            }
+
+            empty.style.display  = 'none';
+            footer.style.display = 'block';
+
+            const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+            document.getElementById('cart-total').textContent = `P${total}`;
+
+            const count = cart.reduce((sum, item) => sum + item.qty, 0);
+            badge.textContent   = count;
+            badge.style.display = 'flex';
+
+            list.innerHTML = cart.map((item, idx) => `
+                <div class="cart-item">
+                    <div class="cart-item-info">
+                        <strong>${item.name}</strong>
+                        <span>P${item.price} each</span>
+                    </div>
+                    <div class="cart-item-qty">
+                        <button class="qty-btn" data-idx="${idx}" data-action="dec">−</button>
+                        <span>${item.qty}</span>
+                        <button class="qty-btn" data-idx="${idx}" data-action="inc">+</button>
+                    </div>
+                    <div class="cart-item-total">P${item.price * item.qty}</div>
+                    <button class="cart-remove" data-idx="${idx}"><i class="fas fa-xmark"></i></button>
+                </div>
+            `).join('');
+
+            // qty buttons
+            list.querySelectorAll('.qty-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const idx = parseInt(btn.dataset.idx);
+                    if (btn.dataset.action === 'inc') cart[idx].qty++;
+                    else { cart[idx].qty--; if (cart[idx].qty <= 0) cart.splice(idx, 1); }
+                    renderCart();
+                });
+            });
+
+            list.querySelectorAll('.cart-remove').forEach(btn => {
+                btn.addEventListener('click', () => { cart.splice(parseInt(btn.dataset.idx), 1); renderCart(); });
+            });
+        }
+
+        // ADD TO CART
+        document.querySelectorAll('.shop-quick-add').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const id    = btn.dataset.id;
+                const name  = btn.dataset.name;
+                const price = parseInt(btn.dataset.price);
+                const existing = cart.find(i => i.id === id);
+                if (existing) existing.qty++;
+                else cart.push({ id, name, price, qty: 1 });
+
+                // Animate button
+                btn.innerHTML = '<i class="fas fa-check"></i> Added!';
+                btn.style.background = '#000';
+                setTimeout(() => {
+                    btn.innerHTML = '<i class="fas fa-plus"></i> Add to Cart';
+                    btn.style.background = '';
+                }, 1500);
+
+                renderCart();
+                openCart();
+            });
+        });
+
+        // CHECKOUT via WhatsApp
+        document.getElementById('checkout-btn').addEventListener('click', () => {
+            if (cart.length === 0) return;
+            const lines  = cart.map(i => `${i.qty}x ${i.name} (P${i.price * i.qty})`).join('%0A');
+            const total  = cart.reduce((s, i) => s + i.price * i.qty, 0);
+            const msg    = `Hi Shoova! I'd like to order:%0A%0A${lines}%0A%0ATotal: P${total}%0A%0APlease confirm availability and delivery.`;
+            window.open(`https://wa.me/26771234567?text=${msg}`, '_blank');
+        });
+
+        // CLEAR CART
+        document.getElementById('cart-clear').addEventListener('click', () => { cart = []; renderCart(); });
+
+        renderCart();
+
+        // ── FILTER ────────────────────────────────────────────
+        const filterBtns = document.querySelectorAll('.shop-filter-btn');
+        const products   = document.querySelectorAll('.shop-card');
+        let activeFilter = 'all';
+
+        function applyFilter() {
+            products.forEach(card => {
+                const cat = card.dataset.cat;
+                const show = activeFilter === 'all' || cat === activeFilter;
+                card.style.display = show ? 'flex' : 'none';
+                if (show) card.classList.add('revealed');
+            });
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                activeFilter = btn.dataset.cat;
+                applyFilter();
+            });
+        });
+
+        // ── SORT ──────────────────────────────────────────────
+        document.getElementById('shop-sort').addEventListener('change', function () {
+            const grid = document.getElementById('shop-grid');
+            const cards = [...grid.querySelectorAll('.shop-card')];
+            if (this.value === 'price-low') {
+                cards.sort((a, b) => parseInt(a.dataset.price) - parseInt(b.dataset.price));
+            } else if (this.value === 'price-high') {
+                cards.sort((a, b) => parseInt(b.dataset.price) - parseInt(a.dataset.price));
+            } else {
+                cards.sort((a, b) => parseInt(a.dataset.id || 0) - parseInt(b.dataset.id || 0));
+            }
+            cards.forEach(c => grid.appendChild(c));
+        });
+
+        // ── SCROLL REVEAL ──────────────────────────────────────
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
+        }, { threshold: 0.08 });
+        products.forEach(el => obs.observe(el));
+
+    });
+    </script>
+
+</body>
+</html>

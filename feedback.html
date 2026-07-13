@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback — Shoova</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="feedback.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="feedback-page">
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <h1 class="logo">Shoova</h1>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="full-menu" id="full-menu">
+                <button class="close-menu" id="close-menu">&times;</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <div class="menu-overlay" id="menu-overlay"></div>
+        </nav>
+    </header>
+
+    <!-- ── HERO ───────────────────────────────────────── -->
+    <section class="fb-hero">
+        <div class="fb-hero-bg"></div>
+        <div class="fb-hero-content">
+            <p class="fb-eyebrow">✦ Customer Feedback</p>
+            <h1>What People<br>Are Saying.</h1>
+            <p class="fb-hero-sub">Real reviews from real customers. We don't filter — we deliver.</p>
+        </div>
+
+        <!-- FLOATING STAT CARDS -->
+        <div class="fb-hero-stats">
+            <div class="fb-stat-card">
+                <span class="fb-stat-num">4.9</span>
+                <div class="fb-stat-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="fb-stat-label">Average Rating</span>
+            </div>
+            <div class="fb-stat-card">
+                <span class="fb-stat-num">100+</span>
+                <span class="fb-stat-label">Reviews Left</span>
+            </div>
+            <div class="fb-stat-card">
+                <span class="fb-stat-num">98%</span>
+                <span class="fb-stat-label">Would Return</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── RATING BREAKDOWN ───────────────────────────── -->
+    <section class="fb-breakdown">
+        <div class="fb-breakdown-inner">
+            <div class="fb-breakdown-score">
+                <span class="fb-big-score">4.9</span>
+                <div class="fb-big-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Based on 100+ reviews</p>
+            </div>
+            <div class="fb-bars">
+                <div class="fb-bar-row">
+                    <span class="fb-bar-label">5 ★</span>
+                    <div class="fb-bar-track"><div class="fb-bar-fill" style="width: 87%"></div></div>
+                    <span class="fb-bar-pct">87%</span>
+                </div>
+                <div class="fb-bar-row">
+                    <span class="fb-bar-label">4 ★</span>
+                    <div class="fb-bar-track"><div class="fb-bar-fill" style="width: 10%"></div></div>
+                    <span class="fb-bar-pct">10%</span>
+                </div>
+                <div class="fb-bar-row">
+                    <span class="fb-bar-label">3 ★</span>
+                    <div class="fb-bar-track"><div class="fb-bar-fill" style="width: 2%"></div></div>
+                    <span class="fb-bar-pct">2%</span>
+                </div>
+                <div class="fb-bar-row">
+                    <span class="fb-bar-label">2 ★</span>
+                    <div class="fb-bar-track"><div class="fb-bar-fill" style="width: 1%"></div></div>
+                    <span class="fb-bar-pct">1%</span>
+                </div>
+                <div class="fb-bar-row">
+                    <span class="fb-bar-label">1 ★</span>
+                    <div class="fb-bar-track"><div class="fb-bar-fill" style="width: 0%"></div></div>
+                    <span class="fb-bar-pct">0%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── EXISTING REVIEWS ───────────────────────────── -->
+    <section class="fb-reviews">
+        <div class="fb-reviews-header">
+            <p class="fb-section-tag">✦ Customer Reviews</p>
+            <h2>Fresh From Our Customers</h2>
+        </div>
+
+        <div class="fb-reviews-grid" id="reviews-grid">
+
+            <div class="fb-review-card featured-review">
+                <div class="fb-review-top">
+                    <div class="fb-avatar">LM</div>
+                    <div class="fb-reviewer-info">
+                        <strong>Lebo M.</strong>
+                        <span>UB Student</span>
+                    </div>
+                    <div class="fb-review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="fb-review-text">"My Air Forces looked like I just unboxed them. Absolutely unreal results. I was so impressed I brought 3 more pairs the following week. Shoova is genuinely the best!"</p>
+                <div class="fb-review-meta">
+                    <span class="fb-service-tag">Deep Clean</span>
+                    <span class="fb-review-date">March 2025</span>
+                </div>
+            </div>
+
+            <div class="fb-review-card">
+                <div class="fb-review-top">
+                    <div class="fb-avatar">KT</div>
+                    <div class="fb-reviewer-info">
+                        <strong>Keabetswe T.</strong>
+                        <span>Regular Customer</span>
+                    </div>
+                    <div class="fb-review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="fb-review-text">"Fast, affordable, and incredible results. Tefho collected from my dorm and returned them the same day. The service is unmatched in Gaborone!"</p>
+                <div class="fb-review-meta">
+                    <span class="fb-service-tag">Basic Wash</span>
+                    <span class="fb-review-date">February 2025</span>
+                </div>
+            </div>
+
+            <div class="fb-review-card">
+                <div class="fb-review-top">
+                    <div class="fb-avatar">TP</div>
+                    <div class="fb-reviewer-info">
+                        <strong>Tshego P.</strong>
+                        <span>First-time Customer</span>
+                    </div>
+                    <div class="fb-review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="fb-review-text">"I was skeptical at first but the deep clean service blew my mind. My Yeezys look brand new. Will definitely be coming back every month!"</p>
+                <div class="fb-review-meta">
+                    <span class="fb-service-tag">Deep Clean</span>
+                    <span class="fb-review-date">January 2025</span>
+                </div>
+            </div>
+
+            <div class="fb-review-card">
+                <div class="fb-review-top">
+                    <div class="fb-avatar">OM</div>
+                    <div class="fb-reviewer-info">
+                        <strong>Onkabetse M.</strong>
+                        <span>BIUST Student</span>
+                    </div>
+                    <div class="fb-review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="fb-review-text">"Affordable prices that actually make sense for a student. My Jordan 1s came back looking fire. Pickup and delivery made it so convenient too."</p>
+                <div class="fb-review-meta">
+                    <span class="fb-service-tag">Restoration</span>
+                    <span class="fb-review-date">December 2024</span>
+                </div>
+            </div>
+
+            <div class="fb-review-card">
+                <div class="fb-review-top">
+                    <div class="fb-avatar">BK</div>
+                    <div class="fb-reviewer-info">
+                        <strong>Bontle K.</strong>
+                        <span>Verified Customer</span>
+                    </div>
+                    <div class="fb-review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="fb-review-text">"I had a pair of white Vans that I thought were done for. After Shoova's basic wash they were spotless. Unbelievable value for money. Thank you!"</p>
+                <div class="fb-review-meta">
+                    <span class="fb-service-tag">Basic Wash</span>
+                    <span class="fb-review-date">November 2024</span>
+                </div>
+            </div>
+
+            <div class="fb-review-card">
+                <div class="fb-review-top">
+                    <div class="fb-avatar">RL</div>
+                    <div class="fb-reviewer-info">
+                        <strong>Refilwe L.</strong>
+                        <span>Sneakerhead</span>
+                    </div>
+                    <div class="fb-review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="fb-review-text">"As someone who collects sneakers I was nervous to hand them over. But Shoova treated each pair with care. The restoration on my OG Jordans was absolutely stunning."</p>
+                <div class="fb-review-meta">
+                    <span class="fb-service-tag">Restoration</span>
+                    <span class="fb-review-date">October 2024</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- LOAD MORE -->
+        <div class="fb-load-more-wrap">
+            <button class="fb-load-more-btn" id="load-more-btn">Load More Reviews</button>
+        </div>
+    </section>
+
+    <!-- ── LEAVE A REVIEW ─────────────────────────────── -->
+    <section class="fb-form-section">
+        <div class="fb-form-left">
+            <p class="fb-section-tag light">✦ Share Your Experience</p>
+            <h2>Cleaned With Us?<br>Tell the World.</h2>
+            <p>Your review helps other customers trust Shoova and helps us keep improving. It takes less than 2 minutes.</p>
+            <div class="fb-form-perks">
+                <div class="fb-perk">
+                    <i class="fas fa-shield-halved"></i>
+                    <span>100% honest — we never edit reviews</span>
+                </div>
+                <div class="fb-perk">
+                    <i class="fas fa-clock"></i>
+                    <span>Takes less than 2 minutes</span>
+                </div>
+                <div class="fb-perk">
+                    <i class="fas fa-heart"></i>
+                    <span>Your feedback helps us grow</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="fb-form-right">
+            <form class="fb-form" id="fb-form">
+
+                <!-- STAR RATING -->
+                <div class="fb-form-group">
+                    <label>Your Rating <span class="req">*</span></label>
+                    <div class="star-picker" id="star-picker">
+                        <i class="fas fa-star star-btn" data-val="1"></i>
+                        <i class="fas fa-star star-btn" data-val="2"></i>
+                        <i class="fas fa-star star-btn" data-val="3"></i>
+                        <i class="fas fa-star star-btn" data-val="4"></i>
+                        <i class="fas fa-star star-btn" data-val="5"></i>
+                    </div>
+                    <input type="hidden" id="rating-val" name="rating" required>
+                    <span class="rating-hint" id="rating-hint">Click to rate</span>
+                </div>
+
+                <!-- NAME -->
+                <div class="fb-form-row">
+                    <div class="fb-form-group">
+                        <label for="fb-fname">First Name <span class="req">*</span></label>
+                        <input type="text" id="fb-fname" placeholder="Tefho" required>
+                    </div>
+                    <div class="fb-form-group">
+                        <label for="fb-lname">Last Name</label>
+                        <input type="text" id="fb-lname" placeholder="Modise">
+                    </div>
+                </div>
+
+                <!-- SERVICE USED -->
+                <div class="fb-form-group">
+                    <label for="fb-service">Service You Used <span class="req">*</span></label>
+                    <select id="fb-service" required>
+                        <option value="" disabled selected>Select a service</option>
+                        <option value="basic">Basic Wash</option>
+                        <option value="deep">Deep Clean</option>
+                        <option value="restoration">Restoration</option>
+                        <option value="express">Express Clean</option>
+                    </select>
+                </div>
+
+                <!-- REVIEW -->
+                <div class="fb-form-group">
+                    <label for="fb-review">Your Review <span class="req">*</span></label>
+                    <textarea id="fb-review" rows="4" placeholder="Tell us about your experience — what did you love? What could we improve?" required></textarea>
+                    <span class="char-count" id="char-count">0 / 300</span>
+                </div>
+
+                <!-- WOULD RECOMMEND -->
+                <div class="fb-form-group">
+                    <label>Would you recommend Shoova?</label>
+                    <div class="fb-recommend-options">
+                        <label class="fb-rec-option">
+                            <input type="radio" name="recommend" value="yes" checked>
+                            <span>👍 Yes, definitely!</span>
+                        </label>
+                        <label class="fb-rec-option">
+                            <input type="radio" name="recommend" value="maybe">
+                            <span>🤷 Maybe</span>
+                        </label>
+                        <label class="fb-rec-option">
+                            <input type="radio" name="recommend" value="no">
+                            <span>👎 Not really</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="fb-submit-btn">
+                    Submit Review <i class="fas fa-arrow-right"></i>
+                </button>
+
+                <!-- SUCCESS -->
+                <div class="fb-success" id="fb-success">
+                    <i class="fas fa-circle-check"></i>
+                    <div>
+                        <strong>Thank you for your review!</strong>
+                        <p>Your feedback means the world to us and helps Shoova grow. 🙏</p>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- ── CTA ────────────────────────────────────────── -->
+    <section class="fb-cta">
+        <h2>Haven't Tried Us Yet?</h2>
+        <p>Join 100+ happy customers across Gaborone. Book your first wash today.</p>
+        <a href="booking.html" class="btn">Book a Wash →</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-ticker">
+            <div class="ticker-track">
+                <span>Fresh Kicks</span><span class="ticker-dot">✦</span>
+                <span>Professional Cleaning</span><span class="ticker-dot">✦</span>
+                <span>Gaborone's Best</span><span class="ticker-dot">✦</span>
+                <span>Same Day Service</span><span class="ticker-dot">✦</span>
+                <span>Deep Clean</span><span class="ticker-dot">✦</span>
+                <span>Restoration Experts</span><span class="ticker-dot">✦</span>
+                <span>Fresh Kicks</span><span class="ticker-dot">✦</span>
+                <span>Professional Cleaning</span><span class="ticker-dot">✦</span>
+                <span>Gaborone's Best</span><span class="ticker-dot">✦</span>
+                <span>Same Day Service</span><span class="ticker-dot">✦</span>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2025 Shoova. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/26771234567" class="footer-social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <p class="footer-made">Made with ♥ in Gaborone</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // ── MENU ──────────────────────────────────────────────
+        const toggle   = document.getElementById('menu-toggle');
+        const fullMenu = document.getElementById('full-menu');
+        const overlay  = document.getElementById('menu-overlay');
+        const closeBtn = document.getElementById('close-menu');
+        toggle.addEventListener('click',   () => { fullMenu.classList.add('open');    overlay.classList.add('open');    });
+        closeBtn.addEventListener('click', () => { fullMenu.classList.remove('open'); overlay.classList.remove('open'); });
+        overlay.addEventListener('click',  () => { fullMenu.classList.remove('open'); overlay.classList.remove('open'); });
+
+        // ── STAR PICKER ────────────────────────────────────────
+        const stars      = document.querySelectorAll('.star-btn');
+        const ratingVal  = document.getElementById('rating-val');
+        const ratingHint = document.getElementById('rating-hint');
+        const hints      = ['', 'Poor', 'Fair', 'Good', 'Great', 'Excellent!'];
+
+        let currentRating = 0;
+
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => {
+                const val = parseInt(star.dataset.val);
+                highlightStars(val);
+            });
+            star.addEventListener('mouseout', () => {
+                highlightStars(currentRating);
+            });
+            star.addEventListener('click', () => {
+                currentRating = parseInt(star.dataset.val);
+                ratingVal.value = currentRating;
+                highlightStars(currentRating);
+                ratingHint.textContent = hints[currentRating];
+                ratingHint.className = 'rating-hint active';
+            });
+        });
+
+        function highlightStars(val) {
+            stars.forEach((s, i) => {
+                s.classList.toggle('lit', i < val);
+            });
+        }
+
+        // ── CHAR COUNT ─────────────────────────────────────────
+        const textarea  = document.getElementById('fb-review');
+        const charCount = document.getElementById('char-count');
+        textarea.addEventListener('input', () => {
+            const len = textarea.value.length;
+            charCount.textContent = `${len} / 300`;
+            if (len > 250) charCount.style.color = '#e74c3c';
+            else charCount.style.color = '';
+            if (len > 300) textarea.value = textarea.value.slice(0, 300);
+        });
+
+        // ── FORM SUBMIT ────────────────────────────────────────
+        document.getElementById('fb-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!ratingVal.value) {
+                ratingHint.textContent = 'Please select a rating!';
+                ratingHint.style.color = '#e74c3c';
+                return;
+            }
+            document.getElementById('fb-success').classList.add('show');
+            this.reset();
+            currentRating = 0;
+            highlightStars(0);
+            ratingVal.value = '';
+            ratingHint.textContent = 'Click to rate';
+            ratingHint.className = 'rating-hint';
+            charCount.textContent = '0 / 300';
+        });
+
+        // ── LOAD MORE (simulated) ──────────────────────────────
+        document.getElementById('load-more-btn').addEventListener('click', function () {
+            this.textContent = 'No more reviews to load';
+            this.disabled = true;
+            this.style.opacity = '0.4';
+            this.style.cursor = 'default';
+        });
+
+        // ── SCROLL REVEAL ──────────────────────────────────────
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.fb-review-card, .fb-stat-card, .fb-bar-row').forEach(el => obs.observe(el));
+
+    });
+    </script>
+
+</body>
+</html>

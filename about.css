@@ -1,0 +1,640 @@
+/* =========================================
+   ABOUT PAGE — about.css
+   Pure Black #000 + White #fff
+   ========================================= */
+
+.about-page {
+    background: #fff;
+}
+
+/* ─── SCROLL REVEAL ───────────────────────────────────────────── */
+.about-who-text,
+.about-who-image,
+.mission-card,
+.number-item,
+.trust-item,
+.founder-image-wrap,
+.founder-text {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.about-who-text  { transition-delay: 0.1s; }
+.about-who-image { transition-delay: 0.25s; }
+
+.mission-card:nth-child(1) { transition-delay: 0.1s; }
+.mission-card:nth-child(3) { transition-delay: 0.2s; }
+.mission-card:nth-child(5) { transition-delay: 0.3s; }
+
+.number-item:nth-child(1) { transition-delay: 0.05s; }
+.number-item:nth-child(2) { transition-delay: 0.15s; }
+.number-item:nth-child(3) { transition-delay: 0.25s; }
+.number-item:nth-child(4) { transition-delay: 0.35s; }
+
+.trust-item:nth-child(odd)  { transition-delay: 0.1s; }
+.trust-item:nth-child(even) { transition-delay: 0.2s; }
+
+.founder-image-wrap { transition-delay: 0.1s; }
+.founder-text       { transition-delay: 0.25s; }
+
+.revealed {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* ─── SHARED ──────────────────────────────────────────────────── */
+.section-tag {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+    opacity: 0.45;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.section-tag.light {
+    color: #fff;
+    opacity: 0.5;
+}
+
+/* ─── HERO ────────────────────────────────────────────────────── */
+.about-hero {
+    position: relative;
+    min-height: 90vh;
+    background: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 80px; /* clears fixed navbar */
+}
+
+.about-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: #000;
+    z-index: 0;
+}
+
+/* Subtle noise texture */
+.about-hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    opacity: 0.6;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 80px 70px;
+    animation: heroFadeUp 1s ease forwards;
+}
+
+@keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(35px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.about-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    font-weight: 600;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.about-hero-content h1 {
+    font-size: clamp(2.8rem, 5.5vw, 5.5rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    margin-bottom: 0;
+}
+
+.about-accent {
+    color: #fff;
+    font-style: italic;
+    display: block;
+    opacity: 0.45;
+}
+
+.about-hero-image {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    min-height: 90vh;
+    overflow: hidden;
+}
+
+.about-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(30%);
+    opacity: 0.85;
+    animation: imgScale 1.2s ease forwards;
+}
+
+@keyframes imgScale {
+    from { transform: scale(1.06); }
+    to   { transform: scale(1); }
+}
+
+/* ─── INTRO STATEMENT ─────────────────────────────────────────── */
+.about-intro {
+    padding: 100px 80px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.about-intro-inner {
+    max-width: 820px;
+    text-align: center;
+}
+
+.about-big-quote {
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: #000;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    margin-bottom: 40px;
+}
+
+.about-intro-divider {
+    width: 60px;
+    height: 3px;
+    background: #000;
+    margin: 0 auto 40px;
+}
+
+.about-intro-sub {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ─── WHO WE ARE ──────────────────────────────────────────────── */
+.about-who {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    min-height: 600px;
+    background: #f5f5f5;
+}
+
+.about-who-text {
+    padding: 80px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-who-text h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.about-who-text p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.85;
+    margin-bottom: 18px;
+}
+
+.about-who-text p:last-of-type {
+    margin-bottom: 0;
+}
+
+.about-who-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-who-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(20%);
+    transition: transform 0.6s ease;
+}
+
+.about-who-image:hover img {
+    transform: scale(1.03);
+}
+
+.about-who-badge {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: #000;
+    color: #fff;
+    padding: 20px 28px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.badge-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.badge-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
+/* ─── MISSION / VISION / VALUES ───────────────────────────────── */
+.about-mission {
+    display: flex;
+    align-items: stretch;
+    background: #000;
+    min-height: 300px;
+}
+
+.mission-card {
+    flex: 1;
+    padding: 60px 50px;
+    text-align: left;
+    border-right: 1px solid #1a1a1a;
+}
+
+.mission-card:last-child {
+    border-right: none;
+}
+
+.mission-card:hover {
+    background: #0d0d0d;
+}
+
+.mission-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.mission-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 14px;
+}
+
+.mission-card p {
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.8;
+}
+
+.mission-divider {
+    display: none; /* only shows on mobile */
+}
+
+/* ─── THE NUMBERS ─────────────────────────────────────────────── */
+.about-numbers {
+    background: #000;
+    padding: 0 0 80px;
+}
+
+.about-numbers-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 50px 0;
+    text-align: center;
+}
+
+.about-numbers-inner h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+.numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.number-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    border: 1px solid #1f1f1f;
+    border-radius: 14px;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.number-item:hover {
+    border-color: #fff;
+    background: #0d0d0d;
+}
+
+.number-val {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+}
+
+.number-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #666;
+    font-weight: 600;
+}
+
+/* ─── WHY TRUST US ────────────────────────────────────────────── */
+.about-trust {
+    padding: 100px 80px;
+    background: #fff;
+}
+
+.about-trust-header {
+    max-width: 500px;
+    margin-bottom: 60px;
+}
+
+.about-trust-header h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.2;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+.trust-item {
+    display: flex;
+    gap: 25px;
+    padding: 35px 30px;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    transition: background 0.3s;
+}
+
+.trust-item:nth-child(even) {
+    border-right: none;
+}
+
+.trust-item:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+
+.trust-item:hover {
+    background: #f9f9f9;
+}
+
+.trust-num {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #000;
+    opacity: 0.08;
+    flex-shrink: 0;
+    line-height: 1;
+    padding-top: 4px;
+}
+
+.trust-text h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.trust-text p {
+    font-size: 0.88rem;
+    color: #666;
+    line-height: 1.75;
+}
+
+/* ─── FOUNDER ─────────────────────────────────────────────────── */
+.about-founder {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 0;
+    background: #f5f5f5;
+    min-height: 600px;
+}
+
+.founder-image-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.founder-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(25%);
+    transition: transform 0.6s ease;
+}
+
+.founder-image-wrap:hover img {
+    transform: scale(1.03);
+}
+
+.founder-tag {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    background: #000;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 30px;
+}
+
+.founder-text {
+    padding: 80px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.founder-text h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 25px;
+    letter-spacing: -0.02em;
+}
+
+.founder-quote {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #000;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: 3px solid #000;
+}
+
+.founder-text p {
+    font-size: 0.92rem;
+    color: #555;
+    line-height: 1.85;
+    margin-bottom: 16px;
+}
+
+.founder-sign {
+    font-weight: 700;
+    color: #000 !important;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 30px !important;
+}
+
+.about-btn {
+    margin-top: 0;
+}
+
+/* ─── CTA ─────────────────────────────────────────────────────── */
+.about-cta {
+    background: #000;
+    padding: 100px 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.about-cta h2 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.about-cta p {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 40px;
+}
+
+.about-cta-btns {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-outline-white {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    color: #fff;
+}
+
+.btn-outline-white:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .about-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .about-hero-image {
+        min-height: 45vh;
+    }
+
+    .about-who {
+        grid-template-columns: 1fr;
+    }
+
+    .about-who-text { padding: 60px 30px; }
+
+    .about-who-image {
+        min-height: 350px;
+    }
+
+    .about-mission {
+        flex-direction: column;
+    }
+
+    .mission-card {
+        border-right: none;
+        border-bottom: 1px solid #1a1a1a;
+        padding: 40px 30px;
+    }
+
+    .mission-card:last-child { border-bottom: none; }
+
+    .numbers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-trust {
+        padding: 70px 30px;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-item {
+        border-right: none !important;
+        border-bottom: 1px solid #eee !important;
+    }
+
+    .trust-item:last-child { border-bottom: none !important; }
+
+    .about-founder {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-image-wrap { min-height: 350px; }
+    .founder-text { padding: 60px 30px; }
+
+    .about-intro { padding: 70px 30px; }
+    .about-cta { padding: 70px 30px; }
+    .about-cta h2 { font-size: 2rem; }
+}
+
+@media (max-width: 600px) {
+    .about-hero-content { padding: 50px 25px; }
+    .about-hero-content h1 { font-size: 2.5rem; }
+    .about-intro { padding: 60px 20px; }
+    .about-big-quote { font-size: 1.3rem; }
+    .numbers-grid { grid-template-columns: 1fr 1fr; gap: 15px; }
+    .about-numbers-inner { padding: 60px 20px 0; }
+    .founder-text { padding: 40px 20px; }
+    .founder-text h2 { font-size: 2rem; }
+}

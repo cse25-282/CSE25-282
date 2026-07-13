@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tefho's Shoe Wash</title>
+
+    <!-- Bootstrap 5 CSS — handles grid & responsiveness -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Your custom CSS — loaded AFTER Bootstrap so your styles win -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /*
+        ============================================================
+        BOOTSTRAP OVERRIDES
+        These are tiny tweaks to make Bootstrap play nicely with
+        your existing custom styles. Nothing visual changes.
+        ============================================================
+        */
+
+        /* Stop Bootstrap from adding its own box-sizing reset on top */
+        *, *::before, *::after { box-sizing: border-box; }
+
+        /*
+        NAVBAR: Your .navbar already exists in style.css.
+        Bootstrap also has a .navbar class — so we scope Bootstrap's
+        nav utilities to only apply inside .bs-nav to avoid clash.
+        */
+        .bs-nav { display: flex; align-items: center; justify-content: space-between; }
+
+        /* WHY-US GRID → replaced with Bootstrap row/col */
+        /* No changes needed — Bootstrap handles it via classes */
+
+        /* FEATURED GRID → replaced with Bootstrap row/col */
+        /* No changes needed */
+
+        /* HERO SPLIT → replaced with Bootstrap row/col */
+        /* No changes needed */
+
+        /* FOOTER GRID → replaced with Bootstrap row/col */
+        /* No changes needed */
+    </style>
+</head>
+
+<!-- =====================================================
+     HEADER
+     WHAT CHANGED: Nothing visual. Your .navbar, .nav-left,
+     .nav-links, .full-menu all stay. No Bootstrap classes needed
+     here because your custom CSS already handles the header well.
+====================================================== -->
+<header>
+    <nav class="navbar">
+        <div class="nav-left">
+            <h1 class="logo">Shoova</h1>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+
+        <div class="full-menu" id="full-menu">
+            <button class="close-menu" id="close-menu">&times;</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </div>
+
+        <div class="menu-overlay" id="menu-overlay"></div>
+    </nav>
+</header>
+
+<body>
+
+<!-- =====================================================
+     HERO — unchanged, no Bootstrap needed here
+     (full-screen image sections don't benefit from grid)
+====================================================== -->
+<section class="hero-video-section">
+    <div class="video-overlay"></div>
+    <img src="pix.jpg" class="hero-image" alt="Clean Sneakers">
+    <div class="hero-overlay-content">
+        <p class="hero-tagline">Fresh Kicks. Fresh Confidence.</p>
+        <h2 class="hero-headline">Professional shoe<br>cleaning that lasts.</h2>
+        <a href="booking.html" class="hero-cta">BOOK YOUR WASH NOW</a>
+    </div>
+    <div class="scroll-down" id="scroll-down">
+        <span>&#8595;</span>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     SHOE ICONS SCROLL — unchanged
+     (horizontal scroll track, not a grid layout)
+====================================================== -->
+<section class="shoe-icons-section">
+    <div class="shoe-icons-header">
+        <h2>Dirty In. Fresh Out.</h2>
+        <div class="scroll-arrows">
+            <button class="arrow-btn" id="scroll-left">&#8592;</button>
+            <button class="arrow-btn" id="scroll-right">&#8594;</button>
+        </div>
+    </div>
+
+    <div class="shoe-icons-track" id="shoe-track">
+
+        <div class="shoe-icon-card">
+            <div class="shoe-icon-img">
+                <img class="shoe-slide" src="Force.avif" alt="After">
+                <img class="shoe-slide active" src="Force-dirty.webp" alt="Before">
+                <span class="ba-tag before-tag">Before</span>
+            </div>
+            <span class="shoe-icon-label">Air Force 1 Before and After</span>
+            <div class="card-dots">
+                <span class="card-dot active" data-index="0"></span>
+                <span class="card-dot" data-index="1"></span>
+            </div>
+        </div>
+
+        <div class="shoe-icon-card">
+            <div class="shoe-icon-img">
+                <img class="shoe-slide" src="Force2.avif" alt="After">
+                <img class="shoe-slide active" src="Force2_dirty.jpg" alt="Before">
+                <span class="ba-tag before-tag">Before</span>
+            </div>
+            <span class="shoe-icon-label">Air Max</span>
+            <div class="card-dots">
+                <span class="card-dot active" data-index="0"></span>
+                <span class="card-dot" data-index="1"></span>
+            </div>
+        </div>
+
+        <div class="shoe-icon-card">
+            <div class="shoe-icon-img">
+                <img class="shoe-slide" src="campus.avif" alt="After">
+                <img class="shoe-slide active" src="campus_dirty.jpg" alt="Before">
+                <span class="ba-tag before-tag">Before</span>
+            </div>
+            <span class="shoe-icon-label">Campus Before and After</span>
+            <div class="card-dots">
+                <span class="card-dot active" data-index="0"></span>
+                <span class="card-dot" data-index="1"></span>
+            </div>
+        </div>
+
+        <div class="shoe-icon-card">
+            <div class="shoe-icon-img">
+                <img class="shoe-slide" src="Samba.avif" alt="After">
+                <img class="shoe-slide active" src="samba-dirty.jpg" alt="Before">
+                <span class="ba-tag before-tag">Before</span>
+            </div>
+            <span class="shoe-icon-label">Yeezy</span>
+            <div class="card-dots">
+                <span class="card-dot active" data-index="0"></span>
+                <span class="card-dot" data-index="1"></span>
+            </div>
+        </div>
+
+        <div class="shoe-icon-card">
+            <div class="shoe-icon-img">
+                <img class="shoe-slide" src="Pega.avif" alt="After">
+                <img class="shoe-slide active" src="pega-dirty.jpg" alt="Before">
+                <span class="ba-tag before-tag">Before</span>
+            </div>
+            <span class="shoe-icon-label">Nike Dunk</span>
+            <div class="card-dots">
+                <span class="card-dot active" data-index="0"></span>
+                <span class="card-dot" data-index="1"></span>
+            </div>
+        </div>
+
+        <div class="shoe-icon-card">
+            <div class="shoe-icon-img">
+                <img class="shoe-slide" src="Conv.webp" alt="After">
+                <img class="shoe-slide active" src="Conv-dirty.webp" alt="Before">
+                <span class="ba-tag before-tag">Before</span>
+            </div>
+            <span class="shoe-icon-label">New Balance</span>
+            <div class="card-dots">
+                <span class="card-dot active" data-index="0"></span>
+                <span class="card-dot" data-index="1"></span>
+            </div>
+        </div>
+
+        <div class="shoe-icon-card">
+            <div class="shoe-icon-img">
+                <img class="shoe-slide" src="retro-clean.webp" alt="After">
+                <img class="shoe-slide active" src="retro.jpg" alt="Before">
+                <span class="ba-tag before-tag">Before</span>
+            </div>
+            <span class="shoe-icon-label">Converse</span>
+            <div class="card-dots">
+                <span class="card-dot active" data-index="0"></span>
+                <span class="card-dot" data-index="1"></span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =====================================================
+     WHY US
+     WHAT CHANGED: .why-us-grid replaced with Bootstrap
+     row + col-12 col-sm-6 col-lg-4
+     → 1 column on mobile, 2 on tablet, 3 on desktop
+     Your .why-card styles in style.css are untouched.
+====================================================== -->
+<section class="why-us">
+    <div class="massively-container">
+
+        <div class="massively-header">
+            <h2>Why Choose Us</h2>
+        </div>
+
+        <div class="why-us-header">
+            <h2>We Don't Just Clean Shoes.<br>We Restore Confidence.</h2>
+            <p class="why-us-sub">Here's what makes Shoova different from the rest.</p>
+        </div>
+
+        <!-- BEFORE: <div class="why-us-grid"> -->
+        <!-- AFTER:  Bootstrap row with responsive columns -->
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="why-card">
+                    <div class="why-icon"></div>
+                    <h3>Fast Turnaround</h3>
+                    <p>Most cleans done within 24 hours. Need it urgent? We offer same-day express service.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="why-card">
+                    <div class="why-icon"></div>
+                    <h3>Student-Friendly Prices</h3>
+                    <p>Premium cleaning at prices that don't hurt your pocket. Starting from just P50.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="why-card">
+                    <div class="why-icon"></div>
+                    <h3>Professional Products</h3>
+                    <p>We use industry-grade, shoe-safe cleaning solutions that protect every material.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="why-card">
+                    <div class="why-icon"></div>
+                    <h3>We Come To You</h3>
+                    <p>Can't make it to us? No problem. We offer convenient pickup and delivery at your door.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="why-card">
+                    <div class="why-icon"></div>
+                    <h3>All Brands Welcome</h3>
+                    <p>Nike, Adidas, Jordan, Puma, New Balance — if you wear it, we clean it.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="why-card">
+                    <div class="why-icon"></div>
+                    <h3>Proven Results</h3>
+                    <p>500+ shoes cleaned, 100+ happy customers, and a 4.9 star average rating.</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- END Bootstrap row -->
+
+    </div>
+</section>
+
+
+<!-- =====================================================
+     FEATURED IN
+     WHAT CHANGED: .featured-grid replaced with Bootstrap
+     row + col-12 col-sm-6 col-xl-4
+     → 1 col mobile, 2 col tablet, 3 col desktop
+     Your .featured-card, .fc-1–fc-6 styles are untouched.
+====================================================== -->
+<section class="featured-section">
+    <div class="featured-section-header">
+        <h2>Inspired By The Best</h2>
+        <p class="featured-sub">The global names that set the standard in sneaker care.</p>
+    </div>
+
+    <!-- BEFORE: <div class="featured-grid"> -->
+    <!-- AFTER:  Bootstrap row wrapped in a container -->
+    <div class="container-fluid px-4">
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="featured-card fc-1">
+                    <div class="fc-corner fc-tl"></div>
+                    <div class="fc-corner fc-tr"></div>
+                    <div class="fc-stamp">EST.<br>2009</div>
+                    <div class="fc-flag">🇺🇸 USA</div>
+                    <h3>Reshoevn8r</h3>
+                    <div class="fc-divider"></div>
+                    <p>Trusted by millions of sneaker collectors worldwide. The gold standard in professional shoe cleaning solutions.</p>
+                    <div class="fc-bottom">
+                        <span class="fc-category">Cleaning Solutions</span>
+                        <span class="fc-dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="featured-card fc-2">
+                    <div class="fc-corner fc-tl"></div>
+                    <div class="fc-corner fc-tr"></div>
+                    <div class="fc-stamp">EST.<br>2012</div>
+                    <div class="fc-flag">🇬🇧 UK</div>
+                    <h3>Crep Protect</h3>
+                    <div class="fc-divider"></div>
+                    <p>The UK's leading sneaker care brand. Their iconic spray and wipes are found in every serious sneakerhead's collection.</p>
+                    <div class="fc-bottom">
+                        <span class="fc-category">Protection Sprays</span>
+                        <span class="fc-dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="featured-card fc-3">
+                    <div class="fc-corner fc-tl"></div>
+                    <div class="fc-corner fc-tr"></div>
+                    <div class="fc-stamp">EST.<br>2007</div>
+                    <div class="fc-flag">🇺🇸 USA</div>
+                    <h3>Jason Markk</h3>
+                    <div class="fc-divider"></div>
+                    <p>Premium shoe cleaning solutions trusted by sneakerheads and professionals globally. Loved by Nike and Adidas.</p>
+                    <div class="fc-bottom">
+                        <span class="fc-category">Premium Care</span>
+                        <span class="fc-dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="featured-card fc-4">
+                    <div class="fc-corner fc-tl"></div>
+                    <div class="fc-corner fc-tr"></div>
+                    <div class="fc-stamp">EST.<br>2018</div>
+                    <div class="fc-flag">🇺🇸 USA</div>
+                    <h3>Sneakky Klean</h3>
+                    <div class="fc-divider"></div>
+                    <p>Multi-location sneaker cleaning service with walk-ins, express options and a mail-in service that ships nationwide.</p>
+                    <div class="fc-bottom">
+                        <span class="fc-category">Cleaning Service</span>
+                        <span class="fc-dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="featured-card fc-5">
+                    <div class="fc-corner fc-tl"></div>
+                    <div class="fc-corner fc-tr"></div>
+                    <div class="fc-stamp">EST.<br>2015</div>
+                    <div class="fc-flag">🇺🇸 USA</div>
+                    <h3>The Cobblers</h3>
+                    <div class="fc-divider"></div>
+                    <p>Professional shoe restoration using all-natural cleansers. Specialising in designer footwear and luxury sneakers.</p>
+                    <div class="fc-bottom">
+                        <span class="fc-category">Restoration</span>
+                        <span class="fc-dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-4">
+                <div class="featured-card fc-6">
+                    <div class="fc-corner fc-tl"></div>
+                    <div class="fc-corner fc-tr"></div>
+                    <div class="fc-stamp">EST.<br>2019</div>
+                    <div class="fc-flag">🇺🇸 USA</div>
+                    <h3>Weekend Ritual</h3>
+                    <div class="fc-divider"></div>
+                    <p>Door-to-door eco-friendly cleaning with before & after photo updates. Pickup from your door, back fresh.</p>
+                    <div class="fc-bottom">
+                        <span class="fc-category">Door-to-Door</span>
+                        <span class="fc-dot"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- END Bootstrap row -->
+
+</section>
+
+
+<!-- =====================================================
+     HERO SPLIT (Carousel + Text)
+     WHAT CHANGED: The two-column layout replaced with
+     Bootstrap row + col-12 col-lg-6
+     → stacks vertically on mobile, side-by-side on desktop
+     Your .hero-carousel, .hero-text, carousel styles untouched.
+====================================================== -->
+<section class="hero-split">
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+
+            <!-- LEFT: Carousel -->
+            <!-- BEFORE: <div class="carousel-wrapper"> -->
+            <!-- AFTER:  Bootstrap col -->
+            <div class="col-12 col-lg-6">
+                <div class="hero-carousel">
+                    <div class="carousel-container">
+                        <div class="slide active"><img src="Air.jpg" alt="Shoe Cleaning 1"></div>
+                        <div class="slide"><img src="Air2.avif" alt="Shoe Cleaning 2"></div>
+                        <div class="slide"><img src="Air3.webp" alt="Shoe Cleaning 3"></div>
+                        <div class="slide"><img src="Air4.jpg" alt="Shoe Cleaning 4"></div>
+                    </div>
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Text -->
+            <div class="col-12 col-lg-6">
+                <div class="hero-text">
+                    <h2>Fresh Kicks. Fresh Confidence.</h2>
+                    <p>Too busy with school or work? Let Tefho's Shoe Wash handle your sneakers. We deliver professional cleaning services that keep your shoes looking brand new.</p>
+                    <ul class="features">
+                        <li>✔ Fast & reliable service</li>
+                        <li>✔ Affordable student-friendly prices</li>
+                        <li>✔ Deep cleaning & restoration</li>
+                        <li>✔ Convenient booking anytime</li>
+                    </ul>
+                    <a href="booking.html" class="btn">Book Your Wash Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+     WHAT CHANGED: .footer-grid replaced with Bootstrap
+     row + responsive cols
+     → stacks on mobile, 2 cols on tablet, 4 cols on desktop
+     Your .footer-col, .footer-links, all custom styles untouched.
+====================================================== -->
+<footer class="site-footer">
+
+    <!-- Ticker — unchanged -->
+    <div class="footer-ticker">
+        <div class="ticker-track">
+            <span>Fresh Kicks</span><span class="ticker-dot"></span>
+            <span>Professional Cleaning</span><span class="ticker-dot"></span>
+            <span>Gaborone's Best</span><span class="ticker-dot"></span>
+            <span>Same Day Service</span><span class="ticker-dot"></span>
+            <span>Deep Clean</span><span class="ticker-dot"></span>
+            <span>Restoration Experts</span><span class="ticker-dot"></span>
+            <span>Student Friendly</span><span class="ticker-dot"></span>
+            <span>Pickup & Delivery</span><span class="ticker-dot"></span>
+            <span>Fresh Kicks</span><span class="ticker-dot"></span>
+            <span>Professional Cleaning</span><span class="ticker-dot"></span>
+            <span>Gaborone's Best</span><span class="ticker-dot"></span>
+            <span>Same Day Service</span><span class="ticker-dot"></span>
+            <span>Deep Clean</span><span class="ticker-dot"></span>
+            <span>Restoration Experts</span><span class="ticker-dot"></span>
+            <span>Student Friendly</span><span class="ticker-dot"></span>
+            <span>Pickup & Delivery</span><span class="ticker-dot"></span>
+        </div>
+    </div>
+
+    <div class="footer-body">
+
+        <!-- CTA Row — unchanged -->
+        <div class="footer-cta-row">
+            <div class="footer-cta-text">
+                <p class="footer-eyebrow">Ready?</p>
+                <h2 class="footer-headline">Your Shoes<br>Deserve Better.</h2>
+            </div>
+            <div class="footer-cta-actions">
+                <a href="booking.html" class="footer-book-btn">Book a Wash →</a>
+                <a href="https://wa.me/26771234567" class="footer-whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-hr"></div>
+
+        <!-- BEFORE: <div class="footer-grid"> -->
+        <!-- AFTER:  Bootstrap row — 1 col mobile, 2 tablet, 4 desktop -->
+        <div class="row g-4">
+
+            <!-- Brand col — wider on desktop -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="footer-col footer-brand-col">
+                    <h3 class="footer-logo">Shoova</h3>
+                    <p class="footer-tagline">Botswana's go-to sneaker cleaning service. We restore your kicks, fast and affordable.</p>
+                    <div class="footer-rating">
+                        <span class="footer-stars">★★★★★</span>
+                        <span class="footer-rating-text">4.9 · 100+ Reviews</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Basic Wash — P50</a></li>
+                        <li><a href="services.html">Deep Clean — P100</a></li>
+                        <li><a href="services.html">Restoration — P150</a></li>
+                        <li><a href="services.html">Pickup & Delivery</a></li>
+                        <li><a href="services.html">Express Clean</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Get In Touch</h4>
+                    <ul class="footer-contact-list">
+                        <li><i class="fas fa-phone fc-icon"></i><a href="tel:+26771234567">+267 71 234 567</a></li>
+                        <li><i class="fas fa-envelope fc-icon"></i><a href="mailto:hello@shoova.bw">hello@shoova.bw</a></li>
+                        <li><i class="fas fa-location-dot fc-icon"></i><span>Gaborone, Botswana</span></li>
+                        <li><i class="fas fa-clock fc-icon"></i><span>Mon–Sat · 8am – 6pm</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- END Bootstrap row -->
+
+        <div class="footer-hr"></div>
+
+        <!-- Bottom bar — unchanged -->
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2025 Shoova. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://instagram.com/yourusername" class="footer-social-link" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/yourpage" class="footer-social-link" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://tiktok.com/@yourusername" class="footer-social-link" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/26771234567" class="footer-social-link" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:hello@shoova.bw" class="footer-social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer-made">Made with ♥ in Gaborone</p>
+        </div>
+
+    </div>
+</footer>
+
+
+<!-- Bootstrap 5 JS (needed for any Bootstrap JS components) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Your existing JavaScript — unchanged -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    // ── FULL MENU TOGGLE
+    const toggle   = document.getElementById('menu-toggle');
+    const fullMenu = document.getElementById('full-menu');
+    const overlay  = document.getElementById('menu-overlay');
+    const closeBtn = document.getElementById('close-menu');
+
+    function openMenu()  { fullMenu.classList.add('open');    overlay.classList.add('open');    }
+    function closeMenu() { fullMenu.classList.remove('open'); overlay.classList.remove('open'); }
+
+    toggle.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    // ── CAROUSEL AUTO SLIDE
+    const slides = document.querySelectorAll(".slide");
+    const dots   = document.querySelectorAll(".dot");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove("active");
+            dots[i].classList.remove("active");
+        });
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
+    }
+
+    function autoSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    setInterval(autoSlide, 4000);
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+            currentIndex = i;
+            showSlide(currentIndex);
+        });
+    });
+
+    // ── SCROLL DOWN ARROW
+    const scrollDown = document.getElementById('scroll-down');
+    if (scrollDown) {
+        scrollDown.addEventListener('click', () => {
+            document.querySelector('.categories')?.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
+    // ── SHOE TRACK ARROWS
+    const track       = document.getElementById('shoe-track');
+    const scrollRight = document.getElementById('scroll-right');
+    const scrollLeft  = document.getElementById('scroll-left');
+
+    if (track && scrollRight && scrollLeft) {
+        scrollRight.addEventListener('click', () => track.scrollBy({ left:  420, behavior: 'smooth' }));
+        scrollLeft.addEventListener('click',  () => track.scrollBy({ left: -420, behavior: 'smooth' }));
+    }
+
+});
+
+// ── CARD BEFORE/AFTER DOTS
+document.querySelectorAll('.shoe-icon-card').forEach(card => {
+    const slides = card.querySelectorAll('.shoe-slide');
+    const dots   = card.querySelectorAll('.card-dot');
+    const tag    = card.querySelector('.ba-tag');
+
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    slides[0].classList.add('active');
+    dots[0].classList.add('active');
+    tag.textContent = 'After';
+    tag.className   = 'ba-tag after-tag';
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            slides[i].classList.add('active');
+            dots[i].classList.add('active');
+            tag.textContent = i === 0 ? 'After' : 'Before';
+            tag.className   = `ba-tag ${i === 0 ? 'after-tag' : 'before-tag'}`;
+        });
+    });
+});
+</script>
+
+</body>
+</html>

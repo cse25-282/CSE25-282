@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Shoova</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="blog-page">
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <h1 class="logo">Shoova</h1>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="full-menu" id="full-menu">
+                <button class="close-menu" id="close-menu">&times;</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <div class="menu-overlay" id="menu-overlay"></div>
+        </nav>
+    </header>
+
+    <!-- ── HERO ───────────────────────────────────────── -->
+    <section class="blog-hero">
+        <div class="blog-hero-bg"></div>
+        <div class="blog-hero-content">
+            <p class="blog-eyebrow">✦ The Shoova Journal</p>
+            <h1>Sneaker Care.<br><em>Elevated.</em></h1>
+            <p class="blog-hero-sub">Tips, guides, and stories from Botswana's sneaker cleaning experts.</p>
+        </div>
+        <div class="blog-hero-scroll-line"></div>
+    </section>
+
+    <!-- ── CATEGORY FILTER ───────────────────────────── -->
+    <section class="blog-filter-bar">
+        <div class="blog-filter-inner">
+            <button class="filter-btn active" data-cat="all">All Posts</button>
+            <button class="filter-btn" data-cat="care">Shoe Care</button>
+            <button class="filter-btn" data-cat="guide">Cleaning Guides</button>
+            <button class="filter-btn" data-cat="culture">Sneaker Culture</button>
+            <button class="filter-btn" data-cat="news">Shoova News</button>
+        </div>
+        <div class="blog-search-wrap">
+            <i class="fas fa-search"></i>
+            <input type="text" id="blog-search" placeholder="Search articles...">
+        </div>
+    </section>
+
+    <!-- ── FEATURED POST ─────────────────────────────── -->
+    <section class="blog-featured">
+        <div class="blog-featured-image">
+            <img src="Air.jpg" alt="How to clean Air Force 1s">
+            <span class="blog-cat-badge care-badge">Shoe Care</span>
+        </div>
+        <div class="blog-featured-text">
+            <p class="blog-featured-label">✦ Featured Article</p>
+            <h2 class="blog-featured-title">The Ultimate Guide to Keeping Your Air Force 1s White</h2>
+            <p class="blog-featured-excerpt">White sneakers are a statement. But they're also a magnet for dirt, scuffs and yellowing. We've been cleaning hundreds of pairs and we've learned exactly what works — and what destroys them.</p>
+            <div class="blog-post-meta">
+                <span class="blog-author"><i class="fas fa-user"></i> Tefho</span>
+                <span class="blog-date"><i class="fas fa-calendar"></i> March 15, 2025</span>
+                <span class="blog-read-time"><i class="fas fa-clock"></i> 5 min read</span>
+            </div>
+            <a href="#" class="blog-read-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- ── ALL POSTS GRID ─────────────────────────────── -->
+    <section class="blog-posts-section">
+        <div class="blog-posts-header">
+            <p class="blog-section-tag">✦ All Articles</p>
+            <h2>Fresh From the Journal</h2>
+        </div>
+
+        <div class="blog-posts-grid" id="blog-grid">
+
+            <!-- POST 1 -->
+            <article class="blog-card" data-cat="guide">
+                <div class="blog-card-img">
+                    <img src="Air2.avif" alt="Deep clean guide">
+                    <span class="blog-cat-badge guide-badge">Cleaning Guide</span>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Step-by-Step: Deep Cleaning Your Sneakers at Home</h3>
+                    <p>Before you book a professional clean, here's what you can do yourself between washes to keep your kicks looking sharp every day.</p>
+                    <div class="blog-post-meta">
+                        <span><i class="fas fa-calendar"></i> Feb 28, 2025</span>
+                        <span><i class="fas fa-clock"></i> 4 min read</span>
+                    </div>
+                    <a href="#" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- POST 2 -->
+            <article class="blog-card" data-cat="culture">
+                <div class="blog-card-img">
+                    <img src="Air3.webp" alt="Sneaker culture Botswana">
+                    <span class="blog-cat-badge culture-badge">Sneaker Culture</span>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Sneaker Culture in Botswana: How We're Building a Movement</h3>
+                    <p>The sneaker scene in Gaborone is growing fast. From campus to the streets, here's a look at how sneaker culture is evolving in Botswana.</p>
+                    <div class="blog-post-meta">
+                        <span><i class="fas fa-calendar"></i> Feb 10, 2025</span>
+                        <span><i class="fas fa-clock"></i> 6 min read</span>
+                    </div>
+                    <a href="#" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- POST 3 -->
+            <article class="blog-card" data-cat="care">
+                <div class="blog-card-img">
+                    <img src="Air4.jpg" alt="Suede care tips">
+                    <span class="blog-cat-badge care-badge">Shoe Care</span>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Suede Sneakers: The Most Misunderstood Material in Your Collection</h3>
+                    <p>Suede requires completely different care to leather or mesh. Most people ruin their suede shoes because they treat them the same. Here's what you need to know.</p>
+                    <div class="blog-post-meta">
+                        <span><i class="fas fa-calendar"></i> Jan 22, 2025</span>
+                        <span><i class="fas fa-clock"></i> 5 min read</span>
+                    </div>
+                    <a href="#" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- POST 4 -->
+            <article class="blog-card" data-cat="news">
+                <div class="blog-card-img">
+                    <img src="Force.avif" alt="Shoova launch">
+                    <span class="blog-cat-badge news-badge">Shoova News</span>
+                </div>
+                <div class="blog-card-body">
+                    <h3>From a Dorm Room to 500 Pairs: The Shoova Story So Far</h3>
+                    <p>One year in, and we've cleaned over 500 pairs of shoes for over 100 customers. Here's an honest look at how we got here and where we're going.</p>
+                    <div class="blog-post-meta">
+                        <span><i class="fas fa-calendar"></i> Jan 5, 2025</span>
+                        <span><i class="fas fa-clock"></i> 7 min read</span>
+                    </div>
+                    <a href="#" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- POST 5 -->
+            <article class="blog-card" data-cat="guide">
+                <div class="blog-card-img">
+                    <img src="Samba.avif" alt="Lace cleaning">
+                    <span class="blog-cat-badge guide-badge">Cleaning Guide</span>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Why Your Laces Are Ruining Your Shoe Game (And How to Fix It)</h3>
+                    <p>Dirty laces can make even a perfectly clean pair of shoes look terrible. Here's the quickest way to get your laces bright white again.</p>
+                    <div class="blog-post-meta">
+                        <span><i class="fas fa-calendar"></i> Dec 18, 2024</span>
+                        <span><i class="fas fa-clock"></i> 3 min read</span>
+                    </div>
+                    <a href="#" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- POST 6 -->
+            <article class="blog-card" data-cat="care">
+                <div class="blog-card-img">
+                    <img src="campus.avif" alt="Shoe storage tips">
+                    <span class="blog-cat-badge care-badge">Shoe Care</span>
+                </div>
+                <div class="blog-card-body">
+                    <h3>How to Store Your Sneakers So They Last 10+ Years</h3>
+                    <p>Cleaning is only half the battle. How you store your sneakers between wears makes a massive difference to how they age. Here's the right way to do it.</p>
+                    <div class="blog-post-meta">
+                        <span><i class="fas fa-calendar"></i> Dec 2, 2024</span>
+                        <span><i class="fas fa-clock"></i> 4 min read</span>
+                    </div>
+                    <a href="#" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- NO RESULTS MESSAGE -->
+        <div class="blog-no-results" id="no-results" style="display:none;">
+            <i class="fas fa-magnifying-glass"></i>
+            <p>No articles found. Try a different search or category.</p>
+        </div>
+
+        <!-- LOAD MORE -->
+        <div class="blog-load-wrap">
+            <button class="blog-load-btn" id="blog-load-btn">Load More Articles</button>
+        </div>
+    </section>
+
+    <!-- ── NEWSLETTER ─────────────────────────────────── -->
+    <section class="blog-newsletter">
+        <div class="blog-newsletter-inner">
+            <div class="blog-nl-text">
+                <p class="blog-nl-tag">✦ Stay in the Loop</p>
+                <h2>Get Sneaker Tips<br>in Your Inbox.</h2>
+                <p>No spam. Just useful shoe care tips, Shoova updates, and exclusive offers — straight to your email.</p>
+            </div>
+            <div class="blog-nl-form-wrap">
+                <form class="blog-nl-form" id="nl-form">
+                    <div class="nl-input-group">
+                        <input type="email" id="nl-email" placeholder="your@email.com" required>
+                        <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <p class="nl-disclaimer">We respect your privacy. Unsubscribe anytime.</p>
+                    <div class="nl-success" id="nl-success">
+                        <i class="fas fa-circle-check"></i> Subscribed! Welcome to the Shoova Journal.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA ────────────────────────────────────────── -->
+    <section class="blog-cta">
+        <h2>Ready for Fresh Kicks?</h2>
+        <p>Knowledge is great. But a professional clean is better.</p>
+        <a href="booking.html" class="btn">Book Your Wash →</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-ticker">
+            <div class="ticker-track">
+                <span>Fresh Kicks</span><span class="ticker-dot">✦</span>
+                <span>Sneaker Care Tips</span><span class="ticker-dot">✦</span>
+                <span>Gaborone's Best</span><span class="ticker-dot">✦</span>
+                <span>The Shoova Journal</span><span class="ticker-dot">✦</span>
+                <span>Cleaning Guides</span><span class="ticker-dot">✦</span>
+                <span>Sneaker Culture</span><span class="ticker-dot">✦</span>
+                <span>Fresh Kicks</span><span class="ticker-dot">✦</span>
+                <span>Sneaker Care Tips</span><span class="ticker-dot">✦</span>
+                <span>Gaborone's Best</span><span class="ticker-dot">✦</span>
+                <span>The Shoova Journal</span><span class="ticker-dot">✦</span>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2025 Shoova. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/26771234567" class="footer-social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <p class="footer-made">Made with ♥ in Gaborone</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // ── MENU ──────────────────────────────────────────────
+        const toggle   = document.getElementById('menu-toggle');
+        const fullMenu = document.getElementById('full-menu');
+        const overlay  = document.getElementById('menu-overlay');
+        const closeBtn = document.getElementById('close-menu');
+        toggle.addEventListener('click',   () => { fullMenu.classList.add('open');    overlay.classList.add('open');    });
+        closeBtn.addEventListener('click', () => { fullMenu.classList.remove('open'); overlay.classList.remove('open'); });
+        overlay.addEventListener('click',  () => { fullMenu.classList.remove('open'); overlay.classList.remove('open'); });
+
+        // ── CATEGORY FILTER ────────────────────────────────────
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards      = document.querySelectorAll('.blog-card');
+        const noResults  = document.getElementById('no-results');
+        let activeFilter = 'all';
+        let searchQuery  = '';
+
+        function filterPosts() {
+            let visible = 0;
+            cards.forEach(card => {
+                const cat     = card.dataset.cat;
+                const title   = card.querySelector('h3').textContent.toLowerCase();
+                const excerpt = card.querySelector('p').textContent.toLowerCase();
+                const catMatch    = activeFilter === 'all' || cat === activeFilter;
+                const searchMatch = searchQuery === '' || title.includes(searchQuery) || excerpt.includes(searchQuery);
+                if (catMatch && searchMatch) {
+                    card.style.display = 'flex';
+                    card.classList.add('revealed');
+                    visible++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            noResults.style.display = visible === 0 ? 'flex' : 'none';
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                activeFilter = btn.dataset.cat;
+                filterPosts();
+            });
+        });
+
+        document.getElementById('blog-search').addEventListener('input', function () {
+            searchQuery = this.value.toLowerCase().trim();
+            filterPosts();
+        });
+
+        // ── LOAD MORE ──────────────────────────────────────────
+        document.getElementById('blog-load-btn').addEventListener('click', function () {
+            this.textContent = 'You\'ve seen all articles';
+            this.disabled = true;
+            this.style.opacity = '0.4';
+            this.style.cursor  = 'default';
+        });
+
+        // ── NEWSLETTER ─────────────────────────────────────────
+        document.getElementById('nl-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('nl-success').classList.add('show');
+            this.querySelector('input').value = '';
+        });
+
+        // ── SCROLL REVEAL ──────────────────────────────────────
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.blog-card').forEach(el => obs.observe(el));
+
+    });
+    </script>
+
+</body>
+</html>
